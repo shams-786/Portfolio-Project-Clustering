@@ -123,7 +123,7 @@ def predict():
         most_important_feature = features[most_important_feature_index]
 
 # Save the details of all similar countries to a JSON file
-        json_filename = '../Data/similar_countries_details.json'
+        json_filename = './Data/similar_countries_details.json'
         features_with_distance = ['country'] + features + ['Distance']
         similar_countries_details = similar_countries[features_with_distance].to_dict(orient='records')
         with open(json_filename, 'w') as f:
